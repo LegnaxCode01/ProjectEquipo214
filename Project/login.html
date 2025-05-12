@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <link rel="stylesheet" href="login/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Iniciar Sesión</h3>
+                        
+                        <!-- Mensajes de alerta globales -->
+                        <div id="alertMessages"></div>
+                        
+                        <!-- Formulario -->
+                        <form id="loginForm" novalidate>
+                            <div class="form-group mb-3">
+                                <label for="username" class="form-label">Usuario</label>
+                                <input type="text" class="form-control" id="username" name="username" 
+                                       placeholder="Ingrese su usuario">
+                                <div class="validation-message text-danger mt-1" id="username-error"></div>
+                            </div>
+                            
+                            <div class="form-group mb-4">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password" 
+                                       placeholder="Ingrese su contraseña">
+                                <div class="validation-message text-danger mt-1" id="password-error"></div>
+                            </div>
+                            
+                            <div class="d-grid gap-2 mb-3">
+                                <button type="submit" class="btn btn-primary">
+                                    Iniciar Sesión
+                                </button>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="mb-0">¿No tienes cuenta?</p>
+                                <a href="registro.html" class="btn btn-secondary mt-2">
+                                    Registrarse
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/jquery.js"></script>
+    <script src="src/bootstrap.min.js"></script>
+    <script src="login/login.js"></script>
+</body>
+</html>

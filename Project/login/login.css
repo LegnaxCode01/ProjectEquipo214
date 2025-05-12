@@ -1,0 +1,151 @@
+/* Estilos generales */
+body {
+    background-color: #bac6d38e;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilos de la tarjeta */
+.card {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-title {
+    color: #0d6efd;
+    font-weight: 300;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    font-size: 2rem;
+}
+
+/* Estilos de formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #ced4da;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.25);
+}
+
+.form-control.border-danger {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Estilos de botones */
+.btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+/* Estilos para mensajes de validación personalizados */
+.validation-message {
+    display: none;
+    font-size: 80%;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+/* Estilos para feedback de validación */
+.invalid-feedback {
+    display: none;
+    font-size: 80%;
+    color: #dc3545;
+    margin-top: 0.25rem;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        margin: 0 15px;
+    }
+    
+    .card-body {
+        padding: 20px;
+    }
+}
+
+/* Logo o icono de la aplicación */
+.app-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.app-logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Mensajes de alerta */
+.alert {
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

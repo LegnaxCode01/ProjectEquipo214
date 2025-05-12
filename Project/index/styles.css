@@ -1,0 +1,100 @@
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand{
+    color:rgb(39, 55, 197)
+}
+
+.navbar{
+    background-color: black;
+}
+p{
+    background-color: aqua;
+}
+
+/* Estilos para el botón de rating */
+.btn-rating {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #343a40, #495057);
+    color: #ffd700;
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid #ffd700;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-rating:hover {
+    color: #343a40;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+    text-decoration: none;
+}
+
+.btn-rating::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ffd700;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-rating:hover::before {
+    width: 100%;
+}
+
+.star-icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.2em;
+    animation: starPulse 1.5s infinite;
+}
+
+@keyframes starPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Corregir el estilo del párrafo del footer */
+footer p {
+    background-color: transparent;
+    margin: 0;
+}
+
+/* Estilos para enlaces deshabilitados */
+.nav-link.disabled {
+    color: #6c757d;
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Estilo para el botón de ranking deshabilitado */
+#rankingLink[style*="pointer-events: none"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Estilos para el mensaje de bienvenida */
+#welcomeText {
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Clases</title>
+    <link href="src/bootstrap.min.css" rel="stylesheet">
+   
+    <link href="gestionar clases/clase.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h1 class="card-title text-center mb-4">Gestión de Clases</h1>
+                        
+                        <div class="mb-4 d-flex flex-wrap justify-content-center gap-3">
+                            <div id="admin-buttons" style="display: none;">
+                                <button id="create-video" class="btn btn-primary" data-toggle="modal" data-target="#videoModal">
+                                    Crear Video
+                                </button>
+                            </div>
+                            <button id="go-to-page" class="btn btn-outline-secondary">
+                                Inicio
+                            </button>
+                        </div>
+                        
+                        <div class="search-container mb-4">
+                            <div class="input-group">
+                                <input type="text" id="search-input" class="form-control" placeholder="Buscar video...">
+                            </div>
+                        </div>
+                        
+                        <div id="video-list" class="mt-4">
+                            <h2 class="mb-4">Lista de Videos</h2>
+                            <ul id="videos" class="list-group list-group-flush">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Formulario de Video</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="video-form" novalidate>
+                        <div class="form-group mb-3">
+                            <label for="video-title" class="form-label">Título</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="video-title">
+                            </div>
+                            <div class="invalid-feedback" id="title-error">Por favor, ingrese un título válido.</div>
+                            <div class="text-danger mt-1 d-none" id="title-custom-error"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="video-url" class="form-label">URL del Video</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="video-url">
+                            </div>
+                            <div class="invalid-feedback" id="url-error">Por favor, ingrese una URL válida (debe comenzar con http:// o https://)</div>
+                            <div class="text-danger mt-1 d-none" id="url-custom-error"></div>
+                        </div>
+                        <div id="form-error-message" class="alert alert-danger d-none mb-3"></div>
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-outline-secondary me-2" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary px-4">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/jquery.js"></script>
+    <script src="src/bootstrap.min.js"></script>
+    <script src="gestionar clases/api-clase.js"></script>
+    <script src="gestionar clases/clase.js"></script>
+</body>
+
+</html>
